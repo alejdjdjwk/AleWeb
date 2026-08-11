@@ -1,0 +1,115 @@
+/* ==========================================
+   Reset Básico y Fuentes
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+/* ==========================================
+   Fondo Dinámico Aniado
+   ========================================== */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #311042, #0284c7);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #ffffff;
+  padding: 20px;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ==========================================
+   Tarjeta Central (Efecto Glassmorphism)
+   ========================================== */
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 40px 24px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Contenedor del ícono */
+.icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 36px;
+  height: 36px;
+  fill: #38bdf8;
+}
+
+/* Tipografía */
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   Botón de Descarga
+   ========================================== */
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0284c7, #2563eb);
+  border: none;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 10px 20px -5px rgba(2, 132, 199, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px -5px rgba(2, 132, 199, 0.7);
+  background: linear-gradient(135deg, #0369a1, #1d4ed8);
+}
+
+.btn-download:active {
+  transform: translateY(0);
+}
+
+.btn-download svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
